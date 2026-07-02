@@ -12,7 +12,10 @@ export default function BlogPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
-      <h1 className="section-heading text-sm">Writing</h1>
+      <p className="kicker">Writing</p>
+      <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+        Notes on CS & AI
+      </h1>
 
       {posts.length === 0 ? (
         <p className="mt-6 max-w-xl text-base leading-relaxed text-ink">
@@ -20,15 +23,11 @@ export default function BlogPage() {
           things at the intersection of both. First post coming soon.
         </p>
       ) : (
-        <div className="mt-10 space-y-8">
+        <div className="mt-10 space-y-6">
           {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="block rounded-lg border border-gray-100 bg-surface p-6 transition-shadow hover:shadow-md"
-            >
-              <h2 className="text-lg font-semibold text-navy">{post.title}</h2>
-              <p className="mt-1 text-xs text-subtle">
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="card-surface block p-6">
+              <h2 className="font-heading text-lg font-semibold text-navy">{post.title}</h2>
+              <p className="mt-1 font-mono text-xs text-subtle">
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",

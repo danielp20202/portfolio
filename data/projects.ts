@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: "Hook Feedback Dashboard",
     category: ["Work Tool", "AI"],
     description:
-      "Internal dashboard for Unity's Partner Relations team to track customer engagement and Hook issue tickets. Integrates async batch LLM summarization via the Anthropic SDK — processing large volumes of customer interaction data to surface insights for PRMs.",
+      "Internal dashboard for Unity's Partner Relations team to track customer engagement and Hook issue tickets. Integrates async batch LLM summarization via the Anthropic SDK, processing large volumes of customer interaction data to surface insights for PRMs.",
     tech: ["Python", "Anthropic SDK", "Async/Await", "Vanilla JS"],
     status: "internal",
   },
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title: "Casa Salsa",
     category: ["Personal Project", "Automation"],
     description:
-      "Marketing website for a short-term rental apartment in Cali, Colombia — including a cron-driven Instagram content pipeline, an approval dashboard, and a documented multi-agent Claude Code system with specialized agent personas (Web Dev, Visuals/Copy, Marketing) managing content operations.",
+      "Marketing website for a short-term rental apartment in Cali, Colombia, including a cron-driven Instagram content pipeline, an approval dashboard, and a documented multi-agent Claude Code system with specialized agent personas (Web Dev, Visuals/Copy, Marketing) managing content operations.",
     tech: ["HTML/CSS/JS", "Vercel", "Upstash Redis", "Meta Graph API", "Meta Pixel", "Claude Code agents"],
     link: "https://casasalsa.co",
     status: "live",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     title: "H1 Check-In Tool",
     category: ["Work Tool", "AI"],
     description:
-      "A guided mid-year self-review tool for Daniel's team at Unity. Walks teammates through structured reflection questions and uses an LLM to draft check-in answers — including accomplishments, growth areas, and feedback for leadership. Built a regional EMEA variant as well.",
+      "A guided mid-year self-review tool for Daniel's team at Unity. Walks teammates through structured reflection questions and uses an LLM to draft check-in answers, including accomplishments, growth areas, and feedback for leadership. Built a regional EMEA variant as well.",
     tech: ["Vanilla JS", "HTML", "OpenAI-compatible API", "Prompt engineering"],
     status: "internal",
   },

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -9,8 +9,18 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+
 const siteUrl = "https://danielpinzon.com";
-const title = "Daniel Pinzon — Customer Success & Partner Relations Leader";
+const title = "Daniel Pinzon | Customer Success & Partner Relations Leader";
 const description =
   "Customer Success and Partner Relations leader with 8+ years in B2B SaaS and gaming. Based in Montreal. Building teams, systems, and the tools that power them.";
 
@@ -18,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s — Daniel Pinzon",
+    template: "%s | Daniel Pinzon",
   },
   description,
   alternates: {
@@ -46,7 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col">
         <Nav />
         <main className="flex-1">{children}</main>

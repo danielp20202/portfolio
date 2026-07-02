@@ -33,8 +33,8 @@ export default async function BlogPostPage({
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-20">
-      <h1 className="text-3xl font-bold tracking-tight text-navy">{post.title}</h1>
-      <p className="mt-2 text-sm text-subtle">
+      <h1 className="font-heading text-3xl font-bold tracking-tight text-navy">{post.title}</h1>
+      <p className="mt-2 font-mono text-xs text-subtle">
         {new Date(post.date).toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",

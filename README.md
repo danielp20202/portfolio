@@ -1,4 +1,4 @@
-# Daniel Pinzon — Portfolio Website
+# Daniel Pinzon's Portfolio Website
 
 Personal portfolio / CV site built with Next.js, TypeScript, and Tailwind CSS.
 
@@ -29,7 +29,7 @@ The file name (minus `.mdx`) becomes the post's URL slug at `/blog/[slug]`. Read
 
 ## Updating the CV PDF
 
-Replace `/public/Daniel_Pinzon_CV.pdf` with the actual CV PDF before deploying — the current file is a placeholder.
+Replace `/public/Daniel_Pinzon_CV.pdf` with the actual CV PDF before deploying; the current file is a placeholder.
 
 ## Setting the Formspree endpoint
 
@@ -37,4 +37,4 @@ Find `FORMSPREE_ENDPOINT` in [`components/ContactForm.tsx`](components/ContactFo
 
 ## Deploy
 
-Push to `main` — Vercel auto-deploys from the connected repository.
+Push to `main`; Vercel auto-deploys from the connected repository.

@@ -15,12 +15,12 @@ const skills = [
 
 export default function SkillsStrip() {
   return (
-    <div className="border-y border-gray-100 bg-surface py-6">
-      <div className="flex gap-3 overflow-x-auto px-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <div className="border-y border-navy/8 bg-surface py-6">
+      <div className="fade-edge-x flex gap-3 overflow-x-auto px-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {skills.map((skill) => (
           <span
             key={skill}
-            className="flex-shrink-0 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-muted"
+            className="flex-shrink-0 rounded-full border border-navy/10 bg-white px-4 py-2 font-mono text-xs text-muted"
           >
             {skill}
           </span>

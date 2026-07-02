@@ -11,7 +11,10 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
-      <h1 className="section-heading text-sm">Projects</h1>
+      <p className="kicker">Projects</p>
+      <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+        Selected work
+      </h1>
       <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink">
         A mix of internal tools built for my teams at Unity, and personal
         projects exploring automation, AI, and full-stack development.

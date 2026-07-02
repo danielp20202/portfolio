@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Users, Gamepad2, Zap } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Users, Gamepad2, Zap } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SkillsStrip from "@/components/SkillsStrip";
 
@@ -20,39 +21,72 @@ const teasers = [
     icon: Zap,
     title: "Builder & Automator",
     description:
-      "I build the tools my teams use — from AI-powered ticket triage to customer insight dashboards.",
+      "I build the tools my teams use, from AI-powered ticket triage to customer insight dashboards.",
   },
 ];
 
 export default function Home() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
-        <h1 className="text-4xl font-bold tracking-tight text-navy sm:text-5xl">
-          Daniel Pinzon
-        </h1>
-        <p className="mt-3 text-xl font-medium text-blue">
-          Customer Success & Partner Relations Leader
-        </p>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink">
-          8+ years building and leading CS teams in B2B SaaS and gaming.
-          Currently at Unity Technologies — managing a $6M+ ARR portfolio and a
-          team of strategic Partner Relations Managers.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="/projects"
-            className="rounded-md bg-blue px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-navy"
-          >
-            View My Work
-          </Link>
-          <a
-            href="/Daniel_Pinzon_CV.pdf"
-            download
-            className="rounded-md border border-navy px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-white"
-          >
-            Download CV
-          </a>
+      <section className="relative overflow-hidden">
+        <div className="dot-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl gap-16 px-6 py-24 sm:py-32 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="kicker">Montreal, Canada &middot; Bilingual EN/ES</p>
+            <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-navy sm:text-5xl">
+              Daniel Pinzon
+            </h1>
+            <p className="mt-3 text-xl font-medium text-blue">
+              Customer Success & Partner Relations Leader
+            </p>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink">
+              8+ years building and leading CS teams in B2B SaaS and gaming.
+              Currently at Unity Technologies, managing a $6M+ ARR portfolio
+              and a team of strategic Partner Relations Managers.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/projects"
+                className="group inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-blue hover:shadow-lg hover:shadow-blue/20"
+              >
+                View My Work
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                />
+              </Link>
+              <a
+                href="/Daniel_Pinzon_CV.pdf"
+                download
+                className="rounded-md border border-navy/20 px-6 py-3 text-sm font-medium text-navy transition-all duration-200 hover:border-navy hover:bg-navy hover:text-white"
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-xs lg:max-w-sm">
+            <div
+              className="glow-blob absolute inset-0 -z-10 scale-125"
+              aria-hidden="true"
+            />
+            <div className="portrait-ring aspect-square rounded-full p-[3px]">
+              <div className="h-full w-full overflow-hidden rounded-full bg-white p-2">
+                <Image
+                  src="/daniel-pinzon.jpg"
+                  alt="Portrait of Daniel Pinzon"
+                  width={480}
+                  height={480}
+                  priority
+                  className="h-full w-full rounded-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-navy/8 bg-white px-4 py-2 text-xs font-medium text-navy shadow-lg">
+              <span className="status-dot h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
+              Open to opportunities
+            </div>
+          </div>
         </div>
       </section>
 
@@ -60,9 +94,13 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-3">
           {teasers.map(({ icon: Icon, title, description }) => (
             <Reveal key={title}>
-              <div className="h-full rounded-lg border border-gray-100 bg-surface p-6">
-                <Icon className="text-blue" size={28} aria-hidden="true" />
-                <h2 className="mt-4 text-base font-semibold text-navy">{title}</h2>
+              <div className="card-surface h-full p-6">
+                <div className="inline-flex rounded-lg bg-blue/8 p-2.5">
+                  <Icon className="text-blue" size={22} aria-hidden="true" />
+                </div>
+                <h2 className="mt-4 font-heading text-base font-semibold text-navy">
+                  {title}
+                </h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
               </div>
             </Reveal>

@@ -8,19 +8,27 @@ const statusLabel: Record<Project["status"], string> = {
   private: "Private",
 };
 
+const statusDot: Record<Project["status"], string> = {
+  live: "bg-green-500",
+  internal: "bg-blue",
+  "in-development": "bg-amber-500",
+  private: "bg-subtle",
+};
+
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="flex flex-col gap-4 rounded-lg border border-gray-100 bg-surface p-6 transition-shadow hover:shadow-md">
+    <div className="card-surface flex flex-col gap-4 p-6">
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-lg font-semibold text-navy">{project.title}</h3>
-        <span className="whitespace-nowrap rounded-full bg-navy/10 px-3 py-1 text-xs font-medium text-navy">
+        <h3 className="font-heading text-lg font-semibold text-navy">{project.title}</h3>
+        <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-navy/8 px-3 py-1 font-mono text-[0.65rem] font-medium uppercase tracking-wide text-navy">
+          <span className={`h-1.5 w-1.5 rounded-full ${statusDot[project.status]}`} aria-hidden="true" />
           {statusLabel[project.status]}
         </span>
       </div>
 
       <div className="flex flex-wrap gap-2">
         {project.category.map((cat) => (
-          <span key={cat} className="text-xs font-medium uppercase tracking-wide text-blue">
+          <span key={cat} className="font-mono text-xs font-medium uppercase tracking-wide text-blue">
             {cat}
           </span>
         ))}
@@ -32,7 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.tech.map((tech) => (
           <span
             key={tech}
-            className="rounded-full border border-gray-200 px-3 py-1 text-xs text-muted"
+            className="rounded-full border border-navy/10 px-3 py-1 font-mono text-xs text-muted"
           >
             {tech}
           </span>
@@ -44,9 +52,10 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-blue hover:text-navy"
+          className="group mt-2 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-blue hover:text-navy"
         >
-          Visit site <ExternalLink size={14} />
+          Visit site
+          <ExternalLink size={14} className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
       )}
     </div>
