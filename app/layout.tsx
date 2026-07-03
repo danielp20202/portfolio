@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://danielpinzon.com";
+const siteUrl = "https://danielpi.me";
 const title = "Daniel Pinzon | Partner Relations & Customer Success Leader";
 const description =
   "Partner Relations and Customer Success leader with 8+ years in B2B SaaS and gaming. Based in Montreal. Building teams, systems, and the tools that power them.";
