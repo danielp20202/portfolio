@@ -85,7 +85,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-20">
+      <section id="experience" className="mt-20 scroll-mt-24">
         <h2 className="kicker mb-8">Experience</h2>
         <div className="space-y-10">
           {experience.map((entry) => (

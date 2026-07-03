@@ -53,7 +53,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/projects"
+                href="/about#experience"
                 className="group inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-blue hover:shadow-lg hover:shadow-blue/20"
               >
                 View My Work
@@ -129,6 +129,28 @@ export default function Home() {
       </section>
 
       <SkillsStrip />
+
+      <section className="border-t border-navy/8">
+        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+          <p className="kicker justify-center">Beyond the day job</p>
+          <h2 className="mt-3 font-heading text-2xl font-bold text-navy sm:text-3xl">
+            Curious what I build in my spare time?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-ink">
+            From AI-powered internal tools to personal side projects, see the code behind the work.
+          </p>
+          <Link
+            href="/projects"
+            className="group mt-6 inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-blue hover:shadow-lg hover:shadow-blue/20"
+          >
+            View Projects
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-200 group-hover:translate-x-0.5"
+            />
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
