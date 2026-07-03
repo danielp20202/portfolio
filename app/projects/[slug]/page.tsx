@@ -90,7 +90,7 @@ export default async function ProjectDetailPage({
       {project.architecture && (
         <>
           <section className="mt-16">
-            <p className="kicker">Architecture</p>
+            <h2 className="kicker">Architecture</h2>
             <p className="mt-4 text-base leading-relaxed text-ink">{project.architecture.summary}</p>
             <div className="mt-8">
               <ArchitectureFlow steps={project.architecture.steps} />
@@ -98,7 +98,7 @@ export default async function ProjectDetailPage({
           </section>
 
           <section className="mt-16">
-            <p className="kicker">Key decisions</p>
+            <h2 className="kicker">Key decisions</h2>
             <ul className="mt-6 space-y-3">
               {project.architecture.decisions.map((decision) => (
                 <li key={decision} className="flex gap-3 text-sm leading-relaxed text-ink">
@@ -112,7 +112,7 @@ export default async function ProjectDetailPage({
       )}
 
       <section className="mt-16">
-        <p className="kicker">Tech stack</p>
+        <h2 className="kicker">Tech stack</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
             <span

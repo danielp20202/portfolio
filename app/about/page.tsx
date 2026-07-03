@@ -65,7 +65,7 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-20">
-        <p className="kicker mb-8">Skills</p>
+        <h2 className="kicker mb-8">Skills</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {skillsBreakdown.map(({ category, items }) => (
             <div key={category} className="card-surface p-5">
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20">
-        <p className="kicker mb-8">Experience</p>
+        <h2 className="kicker mb-8">Experience</h2>
         <div className="space-y-10">
           {experience.map((entry) => (
             <Reveal key={`${entry.title}-${entry.dateRange}`}>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20">
-        <p className="kicker mb-8">Education & Certifications</p>
+        <h2 className="kicker mb-8">Education & Certifications</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {education.map((entry) => (
             <div key={entry.title} className="card-surface p-5">

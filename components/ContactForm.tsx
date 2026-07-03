@@ -37,7 +37,7 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="card-surface p-6 text-sm text-ink">
+      <div className="card-surface p-6 text-sm text-ink" role="status" aria-live="polite">
         Thanks for reaching out. I&apos;ll get back to you soon.
       </div>
     );
@@ -93,7 +93,7 @@ export default function ContactForm() {
       </button>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">
+        <p className="text-sm text-red-600" role="alert" aria-live="assertive">
           Something went wrong. Please try again or email me directly.
         </p>
       )}

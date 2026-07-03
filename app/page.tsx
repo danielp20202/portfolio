@@ -39,7 +39,7 @@ export default function Home() {
         <div className="dot-grid pointer-events-none absolute inset-0" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-6xl gap-16 px-6 py-24 sm:py-32 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="kicker">Montreal, Canada &middot; Bilingual EN/ES</p>
+            <p className="kicker">Canada &middot; Bilingual EN/ES</p>
             <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-navy sm:text-5xl">
               Daniel Pinzon
             </h1>

@@ -24,16 +24,18 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="flex flex-1 flex-col gap-4 p-6">
         <div className="flex items-start justify-between gap-3">
-          {project.architecture ? (
-            <Link
-              href={`/projects/${project.slug}`}
-              className="font-heading text-lg font-semibold text-navy transition-colors hover:text-blue"
-            >
-              {project.title}
-            </Link>
-          ) : (
-            <h3 className="font-heading text-lg font-semibold text-navy">{project.title}</h3>
-          )}
+          <h2 className="font-heading text-lg font-semibold text-navy">
+            {project.architecture ? (
+              <Link
+                href={`/projects/${project.slug}`}
+                className="transition-colors hover:text-blue"
+              >
+                {project.title}
+              </Link>
+            ) : (
+              project.title
+            )}
+          </h2>
           <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-navy/8 px-3 py-1 font-mono text-[0.65rem] font-medium uppercase tracking-wide text-navy">
             <span className={`h-1.5 w-1.5 rounded-full ${statusDot[project.status]}`} aria-hidden="true" />
             {statusLabel[project.status]}

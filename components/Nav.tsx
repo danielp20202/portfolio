@@ -62,7 +62,7 @@ export default function Nav({ showBlog = false }: { showBlog?: boolean }) {
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="text-navy md:hidden"
+          className="-mr-2.5 rounded-md p-2.5 text-navy md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -70,8 +70,8 @@ export default function Nav({ showBlog = false }: { showBlog?: boolean }) {
       </nav>
 
       {open && (
-        <div className="border-t border-navy/8 bg-white px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="border-t border-navy/8 bg-white px-6 py-2 md:hidden">
+          <div className="flex flex-col">
             {links.map((link) => {
               const active = pathname === link.href;
               return (
@@ -79,7 +79,7 @@ export default function Nav({ showBlog = false }: { showBlog?: boolean }) {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`text-sm font-medium ${active ? "text-blue" : "text-ink"}`}
+                  className={`block py-3 text-sm font-medium ${active ? "text-blue" : "text-ink"}`}
                 >
                   {link.label}
                 </Link>
@@ -88,7 +88,7 @@ export default function Nav({ showBlog = false }: { showBlog?: boolean }) {
             <a
               href="/Daniel_Pinzon_CV.pdf"
               download
-              className="w-fit rounded-md bg-navy px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue"
+              className="my-2 w-fit rounded-md bg-navy px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue"
             >
               Download CV
             </a>
