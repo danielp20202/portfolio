@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { getAllPosts } from "@/lib/blog";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,9 +21,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://danielpinzon.com";
-const title = "Daniel Pinzon | Customer Success & Partner Relations Leader";
+const title = "Daniel Pinzon | Partner Relations & Customer Success Leader";
 const description =
-  "Customer Success and Partner Relations leader with 8+ years in B2B SaaS and gaming. Based in Montreal. Building teams, systems, and the tools that power them.";
+  "Partner Relations and Customer Success leader with 8+ years in B2B SaaS and gaming. Based in Montreal. Building teams, systems, and the tools that power them.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -50,20 +51,48 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Daniel Pinzon",
+  jobTitle: "Partner Relations & Customer Success Leader",
+  url: siteUrl,
+  image: `${siteUrl}/daniel-pinzon.jpg`,
+  email: "mailto:danielp20202@gmail.com",
+  sameAs: ["https://linkedin.com/in/danielp2020"],
+  worksFor: {
+    "@type": "Organization",
+    name: "Unity Technologies",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Montreal",
+    addressRegion: "QC",
+    addressCountry: "CA",
+  },
+  knowsLanguage: ["English", "Spanish"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const showBlog = getAllPosts().length > 0;
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <Nav />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <Nav showBlog={showBlog} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer showBlog={showBlog} />
       </body>
     </html>
   );

@@ -10,6 +10,7 @@ export default function ExperienceEntry({ entry }: { entry: ExperienceEntryType 
       <p className="mt-1 font-mono text-xs text-muted">
         {entry.dateRange} &nbsp;&middot;&nbsp; {entry.location}
       </p>
+      {entry.note && <p className="mt-1.5 text-sm italic text-muted">{entry.note}</p>}
       <ul className="mt-3 space-y-2">
         {entry.bullets.map((bullet) => (
           <li key={bullet} className="flex gap-2 text-sm leading-relaxed text-ink">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { projects } from "@/data/projects";
+import { projects, statusLabel, statusDot, statusDescription, type ProjectStatus } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "A selection of work tools, personal projects, and side projects Daniel Pinzon has built at the intersection of Customer Success and AI.",
 };
+
+const statuses: ProjectStatus[] = ["live", "internal", "in-development", "private"];
 
 export default function ProjectsPage() {
   return (
@@ -19,6 +21,15 @@ export default function ProjectsPage() {
         A mix of internal tools built for my teams at Unity, and personal
         projects exploring automation, AI, and full-stack development.
       </p>
+
+      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+        {statuses.map((status) => (
+          <div key={status} className="flex items-center gap-1.5" title={statusDescription[status]}>
+            <span className={`h-1.5 w-1.5 rounded-full ${statusDot[status]}`} aria-hidden="true" />
+            <span className="font-mono text-xs text-muted">{statusLabel[status]}</span>
+          </div>
+        ))}
+      </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {projects.map((project) => (

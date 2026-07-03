@@ -68,7 +68,7 @@ export default function ContactPage() {
                 <Icon size={16} aria-hidden="true" />
               </span>
               <div>
-                <p className="font-mono text-[0.65rem] uppercase tracking-wide text-subtle">
+                <p className="font-mono text-[0.65rem] uppercase tracking-wide text-muted">
                   {label}
                 </p>
                 {href ? (

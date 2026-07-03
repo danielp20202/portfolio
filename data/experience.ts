@@ -3,6 +3,7 @@ export interface ExperienceEntry {
   company: string;
   dateRange: string;
   location: string;
+  note?: string;
   bullets: string[];
 }
 
@@ -13,9 +14,11 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Jan 2026 – Present",
     location: "Montreal, QC",
     bullets: [
-      "Lead 5 Partner Relations Managers across a $6M+ ARR portfolio including indie segment and platform partnerships (Microsoft ID@Xbox, Nintendo, Crunchyroll)",
-      "NRR 100.9% through a period of organizational change",
-      "Led end-to-end implementation of Hook (digital CS platform) for the Partner Relations team",
+      "Lead a team of 5 Partner Relations Managers accountable for a $6M+ ARR portfolio across Unity's most strategic gaming and entertainment accounts, including indie segment management and platform partnerships with Microsoft (ID@Xbox), Nintendo, and Crunchyroll",
+      "Maintained net revenue retention (NRR) above 100% (100.9%) across the portfolio, demonstrating account health and revenue stability through a period of organizational change",
+      "Led end-to-end implementation of an internal partner management platform, coordinating requirements across global teams, internal stakeholders, and the product team to replace legacy CRM tooling, delivering a structured rollout on time and on scope",
+      "Drive portfolio health, revenue forecasting, and risk management across a 50-account contracted portfolio, maintaining direct C-suite engagement to protect and grow the business",
+      "Resolve 20+ complex technical and commercial escalations per month, translating studio and client needs into actionable requirements for product, engineering, and commercial teams",
     ],
   },
   {
@@ -24,9 +27,10 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Jan 2024 – Jan 2026",
     location: "Montreal, QC",
     bullets: [
-      "Embedded within studio production environments to track title pipeline, platform expansion, and competitive risk",
-      "Planned and facilitated 2 cross-functional Dev Days for Riot Games and Wildlife Studios",
-      "Influenced product roadmap decisions by escalating production-floor insights at scale",
+      "Owned the primary strategic relationship for a personal book of ~5 of Unity's highest-profile gaming and entertainment partners, managing the full account lifecycle from pre-production through ship and live operations",
+      "Built deep customer insight by embedding directly within studio production environments, tracking title pipeline, platform expansion, tech stack decisions, and competitive risk ahead of market signals",
+      "Influenced product roadmap decisions by escalating production-floor insights at scale, contributing to feature prioritization across rendering pipelines, UI frameworks, and platform integrations",
+      "Planned and facilitated 2 cross-functional Dev Days for Riot Games and Wildlife Studios, coordinating multi-disciplinary teams for feature deep-dives, roadmap previews, and release sneak peeks",
     ],
   },
   {
@@ -35,9 +39,10 @@ export const experience: ExperienceEntry[] = [
     dateRange: "May 2020 – Dec 2023",
     location: "Montreal, QC",
     bullets: [
-      "Built, hired, and developed a team of up to 10 Partner Advisors within a newly created function",
-      "Defined and implemented CS playbooks in Gainsight; reduced portfolio churn from above 2% to below 2%",
-      "Maintained churn below 2% for 3.5 years across gaming and industry verticals",
+      "Built, hired, and developed a team of up to 10 Partner Advisors within a newly created function, establishing onboarding, performance development, and enterprise account coverage frameworks",
+      "Defined and implemented customer success playbooks focused on product adoption, value realization, upsell, and revenue retention, reducing portfolio churn from above 2% to below 2% within the first year",
+      "Maintained churn below 2% over the full 3.5-year tenure, sustaining financial health through a period of rapid company growth",
+      "Ran Dev Days and studio outreach programs as business development and executive relationship-building events, engaging 30+ studios per event at varying pipeline stages",
     ],
   },
   {
@@ -46,8 +51,8 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Mar 2019 – May 2020",
     location: "Montreal, QC",
     bullets: [
-      "Managed onboarding, adoption, and success planning for 10,000+ Unity commercial users",
-      "Designed and implemented automated lifecycle playbooks in Gainsight at scale",
+      "Managed onboarding, product adoption, and success planning for a cohort of 10,000+ Unity commercial users, serving as first point of contact for technical guidance and account health",
+      "Identified upsell and expansion opportunities and surfaced escalation patterns, with findings adopted into team-wide playbook improvements",
     ],
   },
   {
@@ -55,9 +60,11 @@ export const experience: ExperienceEntry[] = [
     company: "Veevart",
     dateRange: "Aug 2017 – Feb 2019",
     location: "Cali, Colombia",
+    note: "Salesforce-based SaaS platform serving museums, galleries, and cultural institutions",
     bullets: [
-      "Delivered end-to-end B2B SaaS implementation for 15 museum and cultural institution clients",
-      "Managed full post-sale lifecycle from implementation through upsell and renewal",
+      "Delivered end-to-end B2B SaaS implementation projects for 15 clients across museums and cultural institutions, leading onboarding, training, and go-live",
+      "Acted as primary liaison between clients and the product team, gathering and validating requirements and conducting UAT to resolve implementation issues",
+      "Managed a portfolio of 15 clients through the full post-sale lifecycle, from implementation through ongoing success, upsell, and renewal",
     ],
   },
 ];
@@ -117,6 +124,7 @@ export const skillsBreakdown: SkillCategory[] = [
       "Team building & coaching",
       "Performance management",
       "Revenue forecasting",
+      "Quota attainment",
       "Cross-functional collaboration",
       "Hiring & onboarding",
     ],
@@ -137,10 +145,9 @@ export const skillsBreakdown: SkillCategory[] = [
       "Unity Engine",
       "Game production lifecycle",
       "Enterprise SaaS",
-      "Gainsight",
       "Salesforce",
-      "Hook",
-      "Customer lifecycle automation",
+      "CRM implementation",
+      "Product feedback loops",
       "AI workflow automation",
       "LLM API integration",
     ],

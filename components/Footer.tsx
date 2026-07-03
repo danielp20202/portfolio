@@ -1,4 +1,6 @@
-export default function Footer() {
+import Link from "next/link";
+
+export default function Footer({ showBlog = false }: { showBlog?: boolean }) {
   const year = new Date().getFullYear();
 
   return (
@@ -32,6 +34,16 @@ export default function Footer() {
           <a href="/Daniel_Pinzon_CV.pdf" download className="transition-colors hover:text-blue-light">
             Download CV
           </a>
+          {!showBlog && (
+            <>
+              <span aria-hidden="true" className="text-white/30">
+                &middot;
+              </span>
+              <Link href="/blog" className="transition-colors hover:text-blue-light">
+                Blog
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </footer>

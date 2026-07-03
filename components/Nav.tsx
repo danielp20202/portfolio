@@ -5,16 +5,19 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const links = [
+const baseLinks = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Nav() {
+export default function Nav({ showBlog = false }: { showBlog?: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  const links = showBlog
+    ? [...baseLinks.slice(0, 2), { href: "/blog", label: "Blog" }, baseLinks[2]]
+    : baseLinks;
 
   return (
     <header className="sticky top-0 z-50 border-b border-navy/8 bg-white/90 backdrop-blur-md">

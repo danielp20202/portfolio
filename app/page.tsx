@@ -4,6 +4,13 @@ import { ArrowRight, Users, Gamepad2, Zap } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SkillsStrip from "@/components/SkillsStrip";
 
+const stats = [
+  { value: "$6M+", label: "ARR portfolio" },
+  { value: "100.9%", label: "Net revenue retention" },
+  { value: "<2%", label: "Churn, sustained 3.5 yrs" },
+  { value: "8+", label: "Years in B2B SaaS & gaming" },
+];
+
 const teasers = [
   {
     icon: Users,
@@ -37,7 +44,7 @@ export default function Home() {
               Daniel Pinzon
             </h1>
             <p className="mt-3 text-xl font-medium text-blue">
-              Customer Success & Partner Relations Leader
+              Partner Relations & Customer Success Leader
             </p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink">
               8+ years building and leading CS teams in B2B SaaS and gaming.
@@ -86,6 +93,19 @@ export default function Home() {
               <span className="status-dot h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
               Open to opportunities
             </div>
+          </div>
+        </div>
+
+        <div className="relative border-t border-navy/8">
+          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-10 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <p className="font-heading text-2xl font-bold text-navy sm:text-3xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 font-mono text-xs text-muted">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

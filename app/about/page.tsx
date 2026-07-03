@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Customer Success and Partner Relations leader with 8+ years in B2B SaaS and gaming at Unity Technologies.",
+    "Partner Relations and Customer Success leader with 8+ years in B2B SaaS and gaming at Unity Technologies.",
 };
 
 export default function AboutPage() {
@@ -37,19 +37,24 @@ export default function AboutPage() {
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-ink">
             <p>
-              I&apos;m a Customer Success and Partner Relations leader with 8+ years of
+              I&apos;m a Partner Relations and Customer Success leader with 8+ years of
               experience in B2B SaaS and gaming technology at Unity Technologies.
-              I&apos;ve built and led teams managing Unity&apos;s most strategic gaming
-              and entertainment accounts, from indie studios to platforms like
-              Microsoft (ID@Xbox) and Nintendo, with a $6M+ ARR portfolio and NRR
-              consistently above 100%.
+              I&apos;ve built and led teams managing a $6M+ ARR portfolio covering
+              Unity&apos;s most strategic gaming and entertainment accounts, from indie
+              studios to platforms like Microsoft (ID@Xbox) and Nintendo, generating
+              deep customer insight that has directly shaped product roadmap decisions.
             </p>
             <p>
-              My background spans both the human side of CS (executive
-              relationships, QBRs, strategic account planning) and the
-              operational side (lifecycle automation in Gainsight, implementation
-              of digital CS platforms, customer cohorting, and playbook design). I
-              also build the internal tools my teams use, from AI-powered ticket
+              My track record spans navigating industry disruption, building
+              high-performing teams, and converting technical complexity into
+              measurable outcomes for the C-suite, with NRR consistently above
+              100%. My background covers both the human side of CS (executive
+              relationships, QBRs, strategic account planning) and the operational
+              side (lifecycle automation, digital CS platform implementation,
+              customer cohorting, and playbook design).
+            </p>
+            <p>
+              I also build the internal tools my teams use, from AI-powered ticket
               triage systems to customer insight dashboards, because I believe
               the best CS leaders understand the technology their customers are
               building on. I&apos;m bilingual in English and Spanish and have

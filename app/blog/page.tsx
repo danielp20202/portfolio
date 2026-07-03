@@ -27,7 +27,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="card-surface block p-6">
               <h2 className="font-heading text-lg font-semibold text-navy">{post.title}</h2>
-              <p className="mt-1 font-mono text-xs text-subtle">
+              <p className="mt-1 font-mono text-xs text-muted">
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
