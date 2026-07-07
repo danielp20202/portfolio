@@ -57,7 +57,7 @@ The file name (minus `.mdx`) becomes the post's URL slug at `/blog/[slug]`. Read
 
 ## Project screenshots (`public/projects/`)
 
-- `casa-salsa.jpg` and `la-runa-tcg.png` are real screenshots (public/client-facing projects).
+- `casa-salsa.jpg` is a real screenshot (public/client-facing project).
 - `hook-dashboard.png`, `prm-hero-stories.png`, `h1-checkin.png` are internal Unity work tools — their screenshots were captured from a **sanitized copy running fake placeholder data** (fictional names/companies), never the real tool. Each card that uses one of these renders a disclosure line ("Screenshot shows sanitized example data...") — keep that disclosure if you ever swap the image.
 - `expense-tracker.png` is a real screenshot of a private personal app, with the profile photo/partner's name hidden via a script before capture, showing only a generic (no dollar amounts) categories page.
 - If you need to recapture any of these, do **not** run the real internal tools with real data for a public screenshot — see git history around the "Add project screenshots" commit for the sanitization approach used.

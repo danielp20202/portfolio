@@ -166,45 +166,6 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "la-runa-tcg",
-    title: "La Runa TCG: Bilingual Shopify Storefront",
-    category: ["Side Project", "Frontend"],
-    description:
-      "A bilingual (EN/ES) e-commerce site for a Magic: The Gathering shop in Pereira, Colombia, with a working cart and full Shopify Storefront GraphQL integration. Delivered as three distinct visual design proposals behind a stakeholder-facing chooser to drive client design decisions.",
-    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Shopify GraphQL", "Vercel", "i18n"],
-    status: "in-development",
-    image: "/projects/la-runa-tcg.png",
-    architecture: {
-      summary:
-        "A Next.js storefront that treats Shopify purely as a headless commerce backend, plus a separate multi-variant proposal app used to land on a final design with the client.",
-      steps: [
-        {
-          label: "Shopify Storefront API",
-          detail: "Product, inventory, and checkout data is fetched via GraphQL through a single data-access layer.",
-        },
-        {
-          label: "Next.js App Router frontend",
-          detail:
-            "Pages render with TypeScript and Tailwind, with a custom i18n layer powering the EN/ES bilingual experience.",
-        },
-        {
-          label: "Client-side cart",
-          detail: "Cart state is held in localStorage and handed off to Shopify's checkout at the end of the flow.",
-        },
-        {
-          label: "Design proposal chooser",
-          detail:
-            "A separate password-gated app presents three fully built visual directions side by side so the client can compare live, interactive versions rather than static mockups.",
-        },
-      ],
-      decisions: [
-        "Built a single Shopify data-access module rather than scattering GraphQL calls across pages, keeping the storefront swappable if the backend ever changes.",
-        "Delivered three complete, interactive design variants instead of static comps, since a working prototype settles design debates faster than a screenshot.",
-        "Wrote a custom i18n layer instead of pulling in a full framework, since the site only needed two languages and a fixed set of routes.",
-      ],
-    },
-  },
-  {
     slug: "guided-self-review-assistant",
     title: "Guided Self-Review Assistant",
     category: ["Work Tool", "AI"],
