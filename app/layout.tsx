@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono, Archivo_Black, Sora, IBM_Plex_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ThemeChrome from "@/components/ThemeChrome";
+import { ThemeProvider, noFlashThemeScript } from "@/components/ThemeProvider";
 import { getAllPosts } from "@/lib/blog";
 import "./globals.css";
 
@@ -18,6 +20,25 @@ const spaceGrotesk = Space_Grotesk({
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+});
+
+// Loaded for the alternate site styles (Block Party, Aurora, Night Shift);
+// only referenced under their respective [data-theme] blocks in globals.css.
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo-black",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const siteUrl = "https://danielpi.me";
@@ -83,9 +104,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${archivoBlack.variable} ${sora.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <script dangerouslySetInnerHTML={{ __html: noFlashThemeScript }} />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
@@ -93,11 +116,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <Nav showBlog={showBlog} />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer showBlog={showBlog} />
+        <ThemeProvider>
+          <ThemeChrome />
+          <Nav showBlog={showBlog} />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer showBlog={showBlog} />
+        </ThemeProvider>
       </body>
     </html>
   );

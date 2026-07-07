@@ -4,7 +4,7 @@ export default function Footer({ showBlog = false }: { showBlog?: boolean }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-navy text-white">
+    <footer className="site-footer relative">
       <div
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-light/60 to-transparent"
         aria-hidden="true"

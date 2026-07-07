@@ -52,21 +52,14 @@ export default function Home() {
               and a team of strategic Partner Relations Managers.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/about#experience"
-                className="group inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-blue hover:shadow-lg hover:shadow-blue/20"
-              >
+              <Link href="/about#experience" className="btn btn-primary group">
                 View My Work
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-200 group-hover:translate-x-0.5"
                 />
               </Link>
-              <a
-                href="/Daniel_Pinzon_CV.pdf"
-                download
-                className="rounded-md border border-navy/20 px-6 py-3 text-sm font-medium text-navy transition-all duration-200 hover:border-navy hover:bg-navy hover:text-white"
-              >
+              <a href="/Daniel_Pinzon_CV.pdf" download className="btn btn-ghost">
                 Download CV
               </a>
             </div>
@@ -139,10 +132,7 @@ export default function Home() {
           <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-ink">
             From AI-powered internal tools to personal side projects, see the code behind the work.
           </p>
-          <Link
-            href="/projects"
-            className="group mt-6 inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-blue hover:shadow-lg hover:shadow-blue/20"
-          >
+          <Link href="/projects" className="btn btn-primary group mt-6">
             View Projects
             <ArrowRight
               size={16}

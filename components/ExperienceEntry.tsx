@@ -3,7 +3,7 @@ import type { ExperienceEntry as ExperienceEntryType } from "@/data/experience";
 export default function ExperienceEntry({ entry }: { entry: ExperienceEntryType }) {
   return (
     <div className="relative border-l-2 border-navy/10 pl-6">
-      <span className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-white bg-blue" />
+      <span className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-[var(--body-bg)] bg-blue" />
       <h3 className="font-heading text-base font-semibold text-navy">
         {entry.title} <span className="font-sans font-normal text-ink">&middot; {entry.company}</span>
       </h3>
